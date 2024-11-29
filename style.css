@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+html:before,
+html:after,
+body:before,
+body:after {
+  content: "";
+  background: #4c36d8;
+  position: fixed;
+  display: block;
+  z-index: 1;
+}
+
+/* 上 */
+html:before {
+  height: 20px; 
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+/* 右 */
+html:after {
+  width: 20px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* 下 */
+body:before {
+  height: 20px;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+
+/* 左 */
+body:after {
+  width: 20px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+video{
+  margin-top: 20px;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.site-title {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+.site-title a {
+  display: block;
+}
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  border-bottom: solid 2px #333;
+}
+
+.section-title::before{
+  content: '';/*何も入れない*/
+  display: inline-block;
+  width: 80px;/*画像の幅*/
+  height: 80px;/*画像の高さ*/
+  background-image: url('conversation.gif');
+  background-size: contain;
+  vertical-align: middle;
+  }
+
+.content-name {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {  
+  width: 100%;
+}
+
+nav{
+  height: 60px;
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  background-color: rgba(255, 255, 255, .3);
+  margin-left: 0;
+  top:20px;
+  left:20px;
+  right:20px;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+#header ul {
+  display: flex;
+  justify-content: right;
+  padding: 0 80px;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li i {
+padding-right: 5px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+padding-top:80px;
+padding-bottom:10px;
+text-align: center;
+
+}
+#mainvisual img {
+  width: 90%;
+  max-width: 1920px;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+introduction
+-------------------------------------------*/
+#introduction .content ,#color .content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#introduction img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+#introduction .text,#color .text{
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+#color .content {
+  background-color: #4c36d8;
+}
+#box{
+  width: 30px;
+}
+
+.favorite-color{
+  color: #4c36d8;
+}
+
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  padding: 5px 0;
+  margin:20px;
+  text-align: center;
+  background-color:#333;
+  color: #fff;
+}
+
+/* ラベル部分 右下に表示 */
+.triangle {
+  bottom: -10px;
+  position: fixed;
+  z-index: 201;
+  right: 0;
+}
+
+.triangle::before {
+    content: "";
+    bottom: -10px;
+    right: 0;
+    border-top: 5em solid transparent;
+    border-right: 5em solid #4c36d8; /* ラベルの色はここで変更 */
+    z-index: 100;
+}
+.triangle::after {
+    display: block;
+    bottom: -10px;
+    transform: rotate(135deg);
+    color: #fff; /* 文字色はここで変更 */
+    font-weight: bold;
+    right: 0;
+    z-index: 101;
+}
+
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+  main{
+    margin: 0 20px;
+    padding:20px
+  }
+
+  #header ul {
+    justify-content: center;
+    padding: 0 5px;
+
+  }
+  #header li {
+    margin-left: 10px;
+}
+
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+  #mainvisual img {
+    height: calc(100vh - 60px);
+  }
+
+  /*-------------------------------------------
+introduction
+  -------------------------------------------*/
+  #introduction .content {
+    flex-direction: column;
+    display:block;
+  }
+  #introduction img {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+}
+
