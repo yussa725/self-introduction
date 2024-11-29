@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>自己紹介ページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splash.css">
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <ul>
+          <li><a href="../index.html"><i class="fa-solid fa-list"></i>List</a></li>
+          <li><a href="#"><i class="fa-solid fa-arrows-up-to-line"></i>Top</a></li>
+          <li><a href="#introduction"><i class="fa-solid fa-user"></i>Introduction</a></li>
+          <li><a href="#color"><i class="fa-solid fa-palette"></i>Color</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="splash">
+      <div id="splash-logo">Now Loading...</div>
+      </div>
+      <div class="splashbg"></div>
+      <div id="container">
+
+    <main>
+      <div id="mainvisual">
+        <img src="mainvisual.jpg" alt="テキストテキストテキスト">
+      </div>
+      <section id="introduction" class="wrapper">
+        <h2 class="section-title">Self Introduction</h2>
+        <div class="content">
+          <img src="me.jpg" alt="苗字名前">
+          <div class="text">
+            <h3 class="content-name"><ruby><rb>苗字名前</rb><rt>ABCD EFGH</rt> </ruby></h3>
+            <p>東京都出身　B型　いて座<br>趣味：野球　|　キャンプ</p>
+            <p>中学は野球部、高校は陸上部でした。<br>身体を動かすのが好きで今でも大学生や社会人の方たちと草野球をしています。<br>
+              池袋のお勧めの場所は、<a href="https://grandscape-ikebukuro.jp/">グランドスケープ池袋</a>の屋上にあるバッティングセンター。<br>
+              課題に行き詰まった時などは学校帰りに学校を上から見下ろし？フルスイングを！<br>
+              ストレス発散に是非！夜は夜景も奇麗ですよ。<br>
+            </p>
+            <video controls  src="video.mp4" poster="videoimg.jpg"></video>
+          </div>
+        </div>
+      </section>
+
+      <section id="color" class="wrapper">
+        <h2 class="section-title">Favorite Color</h2>
+        <div class="content">
+      <div id="box"> </div>
+          <div class="text">
+            <p>
+              私の好きな色は<span class="favorite-color">青（#4c36d8）</span>です。<br>
+              なぜなら・・・・<br>
+              青色は沈静色といわれ心拍数を下げ、心身をリラックスさせる効果があるそうです。<br>
+              心を落ち着けた状態で物事に取り組むことが出来るため、勉強にも仕事にも、もちろん遊びにも集中力をアップさせる効果が期待できるのです。
+              また、青色には時間が早く経過したように感じさせる効果があるそうですよ。<br>
+              そういえば<a href="https://blog.tokyo-ec.ac.jp/">東京電子専門学校</a>のイメージカラーもブルーですね！<br>
+              ２年間よろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2024 D999 ABC DEF</p>
+    </footer>
+      <!--/container--></div>
+      <div class="triangle"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--splash-->
+  <script src="splash.js"></script>
+  </body>
+
+</html>
